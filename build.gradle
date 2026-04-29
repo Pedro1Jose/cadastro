@@ -18,7 +18,9 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.springframework.boot:spring-boot-starter-webmvc'
+	implementation 'org.springframework.boot:spring-boot-starter-webmvc' // Dependencia para criar uma aplicacao web usando o Spring MVC, que é um framework para construir APIs RESTful e aplicações web.
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa' // Dependencia para usar o Spring Data JPA, que é um framework para facilitar o acesso a bancos de dados relacionais usando a especificacao JPA (Java Persistence API).
+	testImplementation 'org.springframework.boot:spring-boot-starter-data-jpa-test'
 	testImplementation 'org.springframework.boot:spring-boot-starter-webmvc-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 }
