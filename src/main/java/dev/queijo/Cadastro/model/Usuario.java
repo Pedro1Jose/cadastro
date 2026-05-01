@@ -18,7 +18,7 @@ import lombok.NoArgsConstructor;
 @Data // Anotacao do Lombok para gerar automaticamente os metodos getters, setters, equals, hashCode e toString
 @NoArgsConstructor // Anotacao do Lombok para gerar um construtor sem argumentos
 @AllArgsConstructor // Anotacao do Lombok para gerar um construtor com todos os argumentos
-public class UsuarioModel {
+public class Usuario {
     
     @Id // Anotacao para indicar que este campo é a chave primaria da tabela
     @GeneratedValue(strategy =GenerationType.IDENTITY) // Anotacao para indicar que o valor deste campo sera gerado automaticamente pelo banco de dados, usando a estrategia de auto-incremento
@@ -31,5 +31,5 @@ public class UsuarioModel {
     private int idade;
     
     @OneToMany(mappedBy = "proprietario") // Anotacao para indicar que esta relacao de um para muitos com CarroModel, onde o campo "usuario" em CarroModel e a chave estrangeira que referencia esta entidade
-    private List<CarroModel> carros;
+    private List<Carro> carros;
 }
